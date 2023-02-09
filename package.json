@@ -1,6 +1,6 @@
 {
   "name": "react-developer-utils",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Packaging together of some handy React code that I've been rewriting in my projects",
   "main": "lib/index.js",
   "files": [
