@@ -5,7 +5,7 @@ name: Node.js Package
 
 on:
   release:
-    types: [created]
+    types: [ created ]
 
 jobs:
   build:
@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: 16
       - run: npm ci
-      - run: npm test
-
+      - run: npm run build --if-present
+  
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
@@ -28,6 +28,7 @@ jobs:
           node-version: 16
           registry-url: https://registry.npmjs.org/
       - run: npm ci
-      - run: npm publish
+      - run: npm release
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+          CI: true
