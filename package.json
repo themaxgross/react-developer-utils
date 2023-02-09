@@ -7,8 +7,7 @@
     "build": "swc src -d lib",
     "pack": "npm run build && npm pack",
     "lint": "eslint ./src",
-    "prepublish": "npm run lint && npm run test && npm run format",
-    "publish": "npm run build && npm publish",
+    "prepare": "npm run lint && npm run test && npm run format",
     "test": "jest",
     "test:watch": "jest --watch",
     "format": "prettier --write ./src"
