@@ -7,10 +7,13 @@
     "lib"
   ],
   "scripts": {
-    "build": "swc src -d lib",
+    "build": "npm run build:swc && npm run build:types",
+    "build:swc": "swc src -d lib",
+    "build:types": "npm run emit-types",
     "pack": "npm run build && npm pack",
     "lint": "eslint ./src",
     "prepublishOnly": "npm run lint && npm run test && npm run format && npm run build",
+    "emit-types": "tsc --project tsconfig.build.json",
     "release": "release-it",
     "test": "jest",
     "test:watch": "jest --watch",
