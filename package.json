@@ -16,6 +16,7 @@
     "test:watch": "jest --watch",
     "format": "prettier --write ./src"
   },
+  "packageManager": "pnpm@7.26.0",
   "keywords": [
     "react",
     "developer",
