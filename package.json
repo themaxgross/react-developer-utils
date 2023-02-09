@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Packaging together of some handy React code that I've been rewriting in my projects",
   "main": "lib/index.js",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "swc src -d lib",
     "pack": "npm run build && npm pack",
@@ -26,6 +29,7 @@
     "@jest/globals": "^29.4.2",
     "@swc/cli": "^0.1.61",
     "@swc/core": "^1.3.34",
+    "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.4.0",
     "@types/node": "*",
     "@types/react": "^18.0.27",
@@ -45,8 +49,12 @@
     "typescript": "^4.9.5"
   },
   "dependencies": {
-    "@testing-library/react": "^13.4.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theleoji/react-developer-utils.git"
+  },
+  "homepage": "https://github.com/theleoji/react-developer-utils"
 }
